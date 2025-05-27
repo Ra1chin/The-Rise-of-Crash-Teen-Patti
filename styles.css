@@ -1,0 +1,97 @@
+/* Custom styles for a modern, responsive design */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
+
+.bg-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20zM40 40H20L40 20z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+header {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    position: relative;
+    padding-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color: #4a90e2;
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, #4a90e2, #9b59b6);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+h2:hover:after {
+    width: 100px;
+}
+
+ul li {
+    margin-bottom: 12px;
+    transition: transform 0.2s ease;
+}
+
+ul li:hover {
+    transform: translateX(5px);
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.25rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    p, ul li {
+        font-size: 1.05rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .container {
+        max-width: 900px;
+    }
+
+    header {
+        padding: 4rem 0;
+    }
+}
